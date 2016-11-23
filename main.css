@@ -1,0 +1,295 @@
+@import "reset.css";
+
+@font-face{
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+header{
+  width: 100%;
+  height: 583px;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.9)
+      ),
+      url(img/people-background.png) no-repeat 0 -250px fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header img{
+  width: 53px;
+  height: 53px;
+  box-shadow: inset 0 1px 3px 0 #000000;
+  display: block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  top: 119px;
+}
+
+h1{
+  top: 211px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: normal;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0, 1px, 1px, rgba(0,0,0,0.5);
+}
+
+h1 span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: normal;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.primary-button{
+  display: block;
+  position: relative;
+  width: 158px;
+  height: 42px;
+  border-radius: 2px;
+  background-color: #e35151;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+header .primary-button{
+  margin: 300px auto 0 auto;
+}
+
+.tabs-container{
+  margin: 0 auto 0 auto;
+  max-width: 1400px;
+}
+
+.tabs{
+  width: 100%;
+  height: 50px;
+  background-color: #111;
+  text-align: center;
+}
+
+.tabs li {
+  display: inline;
+  line-height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.tabs li:first-of-type {
+  margin-right: 33px;
+}
+
+.underline {
+  border-bottom: 1px solid #fff;
+  list-style-type:none;
+  list-style-position: inside;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 33px;
+  color: #222222;
+  font-weight: normal;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  margin: 82px 0 80px 0;
+}
+
+.slack {
+  position: relative;
+  margin-left: 0;
+  margin-right: 80px;
+  width: 40%;
+  height: 40%;
+  float: left;
+}
+
+.description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 84px;
+  margin-bottom: 33px;
+  list-style: circle;
+}
+
+.tabs-container .primary-button{
+  position: relative;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  display: flex;
+  align-items : center;
+  justify-content : center;
+}
+
+.form-container{
+  height: 722px;
+  background-color: #111;
+  padding-top: 60px;
+  margin-top: 115px;
+}
+
+.form-container h2{
+  color: #fff;
+  margin: 0;
+}
+
+.join-instruction{
+  display: block;
+  width: 730px;
+  margin: 48px auto 63px auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 25px;
+  text-align: left;
+}
+
+.hours{
+  font-weight: bolder;
+}
+
+.apply-form{
+  width: 347px;
+  margin: 0 auto 0 auto;
+}
+
+.apply-form input{
+  display: block;
+  width: 347px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  background-color: transparent;
+  margin-bottom: 10px;
+}
+
+.normal-label{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  top: 35px;
+  left: 15px;
+}
+
+.small-label{
+  font-size: 10px;
+  top: 20px;
+}
+
+.form-container .primary-button{
+  margin: 71px auto 0 auto;
+}
+
+footer{
+  width: 100%;
+  height: 620px;
+  background-color: #fff;
+  position: relative;
+}
+
+footer .uxpin-logo{
+  display: block;
+  position: relative;
+  width: 57px;
+  height: 57px;
+  margin: 92px auto 60px auto;
+}
+
+footer h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #333333;
+  font-weight: normal;
+  text-align: center;
+}
+
+footer h3 em{
+  font-weight: 300;
+}
+
+.secondary-button{
+  display: block;
+  position: relative;
+  width: 161px;
+  height: 42px;
+  border-radius: 2px;
+  background-color: #006cff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+footer .secondary-button{
+  margin: 50px auto 0 auto;
+}
+
+.uxpin-footer{
+  width: 868px;
+  height: 307px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 auto 0 auto;
+}
