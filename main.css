@@ -7,9 +7,16 @@
   font-style: normal;
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
+
+/* Header styles */
+
 header{
   width: 100%;
-  height: 583px;
+  height: 100%;
   background:
     linear-gradient(
       rgba(0,0,0,0.9),
@@ -29,7 +36,7 @@ header img{
   display: block;
   position: relative;
   margin: 0 auto 0 auto;
-  top: 119px;
+  top: 120px;
 }
 
 h1{
@@ -71,21 +78,38 @@ h1 span {
   line-height: 40px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 300;
   font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: all 0.5s;
+}
+
+.primary-button:hover{
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(227,81,81,0.3);
+  background-color: rgba(227,81,81,0.9);
+}
+
+.primary-button:active{
+  box-shadow: inset 0 1px 3px 0 rgba(51,51,51,0.8);
 }
 
 header .primary-button{
-  margin: 300px auto 0 auto;
+  margin: 300px auto 120px auto;
 }
 
+/* First section - About Product Tribes/Virtual Events */
+
 .tabs-container{
+  position: relative;
   margin: 0 auto 0 auto;
-  max-width: 1400px;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .tabs{
@@ -106,6 +130,7 @@ header .primary-button{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  cursor: pointer;
 }
 
 .tabs li:first-of-type {
@@ -119,6 +144,26 @@ header .primary-button{
   padding-bottom: 5px;
 }
 
+
+.description-container{
+  position: relative;
+  height: 100%;
+  margin: 0 auto 650px auto;
+  max-width: 1600px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 h2 {
   font-family: 'Playfair Display', serif;
   font-size: 33px;
@@ -129,30 +174,57 @@ h2 {
     -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   text-align: center;
-  margin: 82px 0 80px 0;
+  margin: 100px 0 100px 0;
 }
 
 .slack {
-  position: relative;
-  margin-left: 0;
-  margin-right: 80px;
-  width: 40%;
-  height: 40%;
-  float: left;
+  float: right;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  width: 829px;
+  height: 508px;
+  box-shadow: 3px 10px 20px #f0f0f0;
 }
 
 .description {
+  width: 580px;
+  float: left;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #333333;
   font-weight: 300;
   font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  line-height: 84px;
-  margin-bottom: 33px;
-  list-style: circle;
+  line-height: 30px;
+  margin: 20px 0 83px 20px;
+  list-style: none;
+}
+
+.description li{
+  margin-bottom: 40px;
+}
+
+.group-icon{
+  background-image: url("img/group.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 80px;
+}
+
+.feedback-icon{
+  background-image: url("img/feedback.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 80px;
+}
+
+.webinars-icon{
+  background-image: url("img/webinars.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  padding-left: 80px;
 }
 
 .tabs-container .primary-button{
@@ -164,14 +236,16 @@ h2 {
   justify-content : center;
 }
 
-.form-container{
+/* Second Section - Form*/
+
+#form-container{
   height: 722px;
   background-color: #111;
   padding-top: 60px;
   margin-top: 115px;
 }
 
-.form-container h2{
+#form-container h2{
   color: #fff;
   margin: 0;
 }
@@ -209,11 +283,20 @@ h2 {
   border-radius: 2px;
   background-color: transparent;
   margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  padding-left: 10px;
 }
 
 .normal-label{
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   font-weight: 300;
   font-smooth: always;
@@ -223,20 +306,128 @@ h2 {
   position: relative;
   top: 35px;
   left: 15px;
+  transition: 0.3s all;
+
 }
 
 .small-label{
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   font-size: 10px;
-  top: 20px;
+  top: 17px;
+  left: 10px;
+  color: #666;
+  text-transform: uppercase;
+  transition: 0.3s all;
 }
 
-.form-container .primary-button{
+.apply-form .primary-button{
+  display: block;
+  width: 158px;
+  height: 42px;
   margin: 71px auto 0 auto;
+  border-radius: 2px;
+  border: 0;
+  background-color: #e35151;
+  text-align: center;
+  line-height: 40px;
 }
+
+#submit-button{
+  border: none;
+  outline-style: none;
+}
+
+
+/* Events tab styles */
+
+.events-container{
+  position: relative;
+  margin: 0 auto 0 auto;
+  max-width: 1600px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+.events-container h2{
+  width: 100%;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.events-description{
+  width: 850px;
+  display: block;
+  margin: 0 auto 83px auto;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #333;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.events {
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 850px;
+}
+
+.event{
+  padding-left: 25px;
+  margin-bottom: 60px;
+}
+
+.black{
+  border-left: 7px solid #000;
+}
+
+.silver{
+  border-left: 7px solid #e5e6ea;
+}
+
+.event h3{
+  margin-bottom: 10px;
+}
+
+.event ul{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #333333;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.event a{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #006cfa;
+  font-weight: 300;
+  line-height: 44px;
+  text-decoration: underline;
+}
+
+.event li em {
+  font-weight: normal;
+}
+
+/* Tabs style for JS*/
+
+.inactive {
+  display: none;
+}
+
+/* Footer styles */
+
 
 footer{
   width: 100%;
-  height: 620px;
+  height: 650px;
   background-color: #fff;
   position: relative;
 }
@@ -249,11 +440,14 @@ footer .uxpin-logo{
   margin: 92px auto 60px auto;
 }
 
-footer h3{
+h3{
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   color: #333333;
   font-weight: normal;
+}
+
+footer h3{
   text-align: center;
 }
 
@@ -278,10 +472,22 @@ footer h3 em{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: all 0.5s;
+}
+
+.secondary-button:hover{
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,108,255,0.3);
+  background-color: rgba(0,108,255,0.9);
+}
+
+.secondary-button:active{
+  box-shadow: inset 0 1px 3px 0 rgba(0,108,255,0.8);
 }
 
 footer .secondary-button{
-  margin: 50px auto 0 auto;
+  margin: 80px auto 40px auto;
 }
 
 .uxpin-footer{
@@ -292,4 +498,9 @@ footer .secondary-button{
   right: 0;
   position: absolute;
   margin: 0 auto 0 auto;
+}
+
+.inactive {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
 }

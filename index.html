@@ -5,44 +5,73 @@
       <title>Product Tribes. Slack Community for Designers, PMs and Developers.</title>
       <link rel="stylesheet" href="main.css">
       <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="main.js"></script>
   </head>
 <body>
   <main>
     <header>
       <img src="img/pt-logo.png">
       <h1>Product Tribes<span>Join 1000+ designers, PMs, and developers on Slack</span></h1>
-      <a class="primary-button">Join now!</a>
+      <a href="#form-container" class="primary-button">Join now!</a>
     </header>
     <section class="">
       <ul class="tabs">
-        <li class="underline">About Product Tribes</li>
-        <li>Virtual Events</li>
+        <li id="about" class="underline">About Product Tribes</li>
+        <li id="virtual-events">Virtual Events</li>
       </ul>
       <div class="tabs-container">
+        <div class="description-container">
         <h2>Slack Community for the Tribe of Digital Product Makers</h2>
-        <img src="img/slack.png" class="slack">
-        <ul class="description">
-          <li>Meet product teams at IBM, Groupon, PwC, Hewlett Packard, and more.</li>
-          <li>Give and get feedback on UX, product management, and front-end development.</li>
-          <li>Get early invites to exclusive webinars and free virtual conferences.</li>
-        </ul>
-        <a class="primary-button">Join now!</a>
+          <img src="img/slack.png" class="slack">
+              <ul class="description">
+                <li class="group-icon">Meet product teams at IBM, Groupon, PwC, Hewlett Packard, and more.</li>
+                <li class="feedback-icon">Give and get feedback on UX, product management, and front-end development.</li>
+                <li class="webinars-icon">Get early invites to exclusive webinars and free virtual conferences.</li>
+                <a href="#form-container" class="primary-button">Apply now!</a>
+            </ul>
+          </div>
+          <div class="events-container inactive">
+          <h2>Product Tribes Virtual Events. More Coming Up!</h2>
+          <p class="events-description">Product Tribes community meets up during frequent virtual meetups and webinars. We strive to deliver the highest quality while keeping every event completely free of any charges.</p>
+                <ul class="events">
+                  <li class="event black">
+                      <h3>Enterprise UX Design Masterclass</h3>
+                      <ul class="webinars-list">
+                        <li><em>Designing a Sustainable Enterprise UX Process</em> - Mark Figueiredo, Sr. UX Designer at T. Rowe Price</li>
+                        <li><em>Creating and Scaling Enterprise Design Systems</em> - Brian McLaughlin, VP of UX at Bottomline Technologies</li>
+                        <li><em>Lean UX for the Enterprise</em> - Heather Gilley, UX Designer at Capital One</li>
+                        <li><em>The State o Enterprise UX</em> - Lou Rosenfeld, Dave Malouf and Uday Gajendar</li>
+                        <a>Reserve your spot on all the webinars</a>
+                      </ul>
+                  </li>
+                  <li class="event silver">
+                      <h3>UX &amp; Development Virtual Meetup #1</h3>
+                      <ul class="webinars-list">
+                        <li><em>UX &amp; Development as Partners: Open Q&amp;A</em> - Marcin Treder, Ryan Carver and Jeff Veen</li>
+                        <li><em>Perfecting the UX &amp; Development Workflow</em> - Marcin Treder, CEO at UXPin</li>
+                        <li><em>Agile Product Development: Open Q&amp;A</em> - Sunita Reddy, VP Product at UXPin</li>
+                        <a>Watch now</a>
+                      </ul>
+                  </li>
+              </ul>
+            </div>
       </div>
     </section>
-    <section class="form-container">
+    <section id="form-container">
       <h2>Join Product Tribes<span class="join-instruction">Product Tribes is a community for designers, developers and PMs. If you’re a recruiter - sorry.
         Expect your application to be reviewed in <span class="hours">72 hours.</span></span></h2>
-        <form class="apply-form">
-          <label for="name" class="normal-label small-label">Name</label>
-          <input type="text" id="name">
+        <form class="apply-form" id="apply" method="post">
+          <label for="name" class="normal-label" value="">Name</label>
+            <input type="text" id="name" name="name">
           <label for="job-title" class="normal-label">Job Title</label>
-          <input type="text" id="job-title">
+            <input type="text" name="job-title" value="" id="job-title">
           <label for="company" class="normal-label">Company</label>
-          <input type="text" id="company">
+            <input type="text" name="company" value="" id="company">
           <label for="email" class="normal-label">Email</label>
-          <input type="text" id="email">
+            <input type="text" name="email" value="" id="email">
+          <input type="submit" value="Apply now!" id="submit-button" class="primary-button">
         </form>
-        <a class="primary-button">Apply now!</a>
     </section>
     <footer>
       <img src="img/uxpin-logo.png" class="uxpin-logo">
@@ -51,5 +80,59 @@
       <img src="img/uxpin-footer.png" class="uxpin-footer">
     </footer>
   </main>
+  <script data-cfasync="false" type="text/javascript">
+jQuery( document ).ready(function( $ ) {
+	// variable to hold request
+	var request;
+	// bind to the submit event of our form
+	$("#apply").submit(function(event){
+		// abort any pending request
+		if (request) {
+			request.abort();
+		}
+		// setup some local variables
+		var $form = $(this);
+		// let's select and cache all the fields
+		var $inputs = $form.find("input, select, button, textarea");
+		// serialize the data in the form
+		var serializedData = $form.serialize();
+		// let's disable the inputs for the duration of the ajax request
+		// Note: we disable elements AFTER the form data has been serialized.
+		// Disabled form elements will not be serialized.
+		$inputs.prop("disabled", true);
+		$('#result').text('Sending data...');
+		// fire off the request to /form.php
+		request = $.ajax({
+			// url: "https://script.google.com/macros/s/AKfycbzV--xTooSkBLufMs4AnrCTdwZxVNtycTE4JNtaCze2UijXAg8/exec", // works
+      url: "https://script.google.com/macros/s/AKfycbxcgNmvsZhzCjLAHq8O2TPEhM3hnGz6rNSDNV9pPkMCqiyAAWsj/exec",  // clone
+			type: "post",
+			data: serializedData
+		});
+		// callback handler that will be called on success
+		request.done(function (response, textStatus, jqXHR){
+			// log a message to the console
+      console.log(response, textStatus, jqXHR);
+			$('#result').html('<a href="https://docs.google.com/spreadsheets/d/10tt64TiALYhPMqR2fh9JzkuhxW7oC0rXXPb_pmJ7HAY/edit?usp=sharing" target="_blank">Success - see Google Sheet</a>');
+			console.log("Hooray, it worked!");
+		});
+		// callback handler that will be called on failure
+		request.fail(function (jqXHR, textStatus, errorThrown){
+			// log the error to the console
+			console.error(
+				"The following error occured: "+
+				textStatus, errorThrown
+			);
+		});
+		// callback handler that will be called regardless
+		// if the request failed or succeeded
+		request.always(function () {
+			// reenable the inputs
+			$inputs.prop("disabled", false);
+		});
+		// prevent default posting of form
+		event.preventDefault();
+	});
+});
+</script>
 </body>
 </html>
