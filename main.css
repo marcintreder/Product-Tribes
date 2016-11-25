@@ -2,7 +2,7 @@
 
 @font-face{
   font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Light.otf') format('opentype');
+  src: url('fonts/Montserrat-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
@@ -296,9 +296,10 @@ h2 {
 
 .normal-label{
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   font-weight: 300;
+  text-transform: uppercase;
   font-smooth: always;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -343,6 +344,77 @@ h2 {
   outline-style: none;
 }
 
+.wait {
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid rgba(173,63,59,1);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success{
+  display: block;
+  width: 360px;
+  height: 48px;
+  margin: 71px auto 0 auto;
+  border-radius: 2px;
+  background-color: #01A2A6;
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #ffffff !important;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.all-fields-required{
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #f0f0f0;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* Form validation classes */
+
+.error{
+  display: block;
+  position: relative;
+  background-color: #f07b68;
+  width: 360px;
+  margin: -10px 0 0 0;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #f0f0f0;
+  font-weight: 300;
+}
+
+.error-input{
+  border: 1px solid #f07b68 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  outline: rgba(0, 0, 0, 0);
+}
 
 /* Events tab styles */
 
