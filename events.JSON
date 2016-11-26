@@ -1,0 +1,112 @@
+{
+  "events":
+  [
+    {
+      "name": "Design Leadership Masterclass",
+      "link": "https://www.uxpin.com/webinars/master-class",
+      "linkLabel": "Watch now",
+      "webinars":[
+      {
+        "title": "Building & Sustaining Successful UX Teams",
+        "speaker": "Satyam Kantamneni, CXO at UX Reactor"
+      },
+      {
+        "title": "Spreading Design Thinking in Organizations",
+        "speaker": "Julie Baher, Sr. UX Director at Ilumnia"
+      },
+      {
+        "title": "Collaborative Design for Enterprise Teams",
+        "speaker": "Daniel Castro, Design Director at Sumo Logic"
+      },
+      {
+        "title": "Scaling UX in Organizations",
+        "speaker": "Jason Culbertson, Design Director at Airbnb"
+      }]
+    },
+    {
+      "name": "UX Design on a Global Scale",
+      "link": "https://www.uxpin.com/webinars/ux-design-global-scale-masterclass",
+      "linkLabel": "Watch now",
+      "webinars":[
+      {
+        "title": "Best Practices From 5 Years of Distributed Design",
+        "speaker": "Marcin Treder, CEO at UXPin"
+      },
+      {
+        "title": "Best Practices From 10 Years of Remote UX Research",
+        "speaker": "Nate Bolt, Founder at Ethnio"
+      },
+      {
+        "title": "Lean UX for Distributed Teams: Open Q&amp;",
+        "speaker": "Jeff Gothelf, Author, Speaker"
+      },
+      {
+        "title": "Effective Remote UX Design",
+        "speaker": "Jim Kalbach, Head of Customer Success at Mural"
+      }]
+    },
+    {
+      "name": "Agile UX Masterclass",
+      "link": "https://www.uxpin.com/webinars/agile-ux-masterclass",
+      "linkLabel": "Watch now",
+      "webinars":[
+      {
+        "title": "Agile UX Without Breaking Products",
+        "speaker": "Marcin Treder, CEO at UXPin"
+      },
+      {
+        "title": "Agile Prototyping Best Practices",
+        "speaker": "Nate Ginesi, Sr UX Architect at Lookthink"
+      },
+      {
+        "title": "UX Strategy Blueprint for Agile Teams",
+        "speaker": "Jim Kalbach, Head of Customer Success at Mural"
+      },
+      {
+        "title": "Flexible Design Sprints",
+        "speaker": "Alex Gamble, Lead Designer at PwC Ventures"
+      }]
+    },
+    {
+      "name": "UX & Development Virtual Meetup #1",
+      "link": "https://www.uxpin.com/webinars/ux-development-virtual-meetup-1",
+      "linkLabel": "Watch now",
+      "webinars":[
+      {
+        "title": "UX &amp; Development as Partners: Open Q&amp;A",
+        "speaker": "Marcin Treder, Ryan Carver and Jeff Veen"
+      },
+      {
+        "title": "Perfecting the UX & Development Workflow",
+        "speaker": "Marcin Treder, CEO at UXPin"
+      },
+      {
+        "title": "Agile Product Development: Open Q&amp;A",
+        "speaker": "Sunita Reddy, VP Product at UXPin"
+      }]
+    },
+    {
+      "name": "Enterprise UX Design Masterclass",
+      "link": "https://www.uxpin.com/webinars/enterprise-ux-design-masterclass",
+      "linkLabel": "Reserve your spot on all the webinars",
+      "webinars":[
+      {
+        "title": "Designing a Sustainable Enterprise UX Process",
+        "speaker": "Mark Figueiredo, Sr. UX Designer at T. Rowe Price"
+      },
+      {
+        "title": "Creating and Scaling Enterprise Design Systems",
+        "speaker": "Brian McLaughlin, VP of UX at Bottomline Technologies"
+      },
+      {
+        "title": "Lean UX for the Enterprise",
+        "speaker": "Heather Gilley, UX Designer at Capital One"
+      },
+      {
+        "title": "The State o Enterprise UX",
+        "speaker": "Lou Rosenfeld, Dave Malouf and Uday Gajendar"
+      }]
+    }
+
+]
+}

@@ -11,18 +11,18 @@
 <body>
   <main>
     <header>
-      <img src="img/pt-logo.png">
+      <img src="img/pt-logo.png"> <!--Product Tribes logo-->
       <h1>Product Tribes<span>Join 1000+ designers, PMs, and developers on Slack</span></h1>
-      <a href="#form-container" class="primary-button">Join now!</a>
+      <a href="#form-container" class="primary-button">Apply now!</a>
     </header>
-    <section class="">
-      <ul class="tabs">
+    <section ="tabbed-container">
+      <ul class="tabs"> <!-- Tabs switching between sub-sections-->
         <li id="about" class="underline">About Product Tribes</li>
-        <li id="virtual-events">Virtual Events</li>
+        <li id="virtual-events">Free Virtual Events</li>
       </ul>
       <div class="tabs-container">
         <div class="description-container">
-        <h2>Slack Community for the Tribe of Digital Product Makers</h2>
+        <h2>Slack Community for Digital Product Makers</h2>
           <img src="img/slack.png" class="slack">
               <ul class="description">
                 <li class="group-icon">Meet product teams at IBM, Groupon, PwC, Hewlett Packard, and more.</li>
@@ -31,41 +31,22 @@
                 <a href="#form-container" class="primary-button">Apply now!</a>
             </ul>
           </div>
-          <div class="events-container inactive">
+          <div class="events-container inactive"> <!-- List of Product Tribes virtual events. Filled from JSON-->
           <h2>Product Tribes Virtual Events. More Coming Up!</h2>
           <p class="events-description">Product Tribes community meets up during frequent virtual meetups and webinars. We strive to deliver the highest quality while keeping every event completely free of any charges.</p>
                 <ul class="events">
-                  <li class="event black">
-                      <h3>Enterprise UX Design Masterclass</h3>
-                      <ul class="webinars-list">
-                        <li><em>Designing a Sustainable Enterprise UX Process</em> - Mark Figueiredo, Sr. UX Designer at T. Rowe Price</li>
-                        <li><em>Creating and Scaling Enterprise Design Systems</em> - Brian McLaughlin, VP of UX at Bottomline Technologies</li>
-                        <li><em>Lean UX for the Enterprise</em> - Heather Gilley, UX Designer at Capital One</li>
-                        <li><em>The State o Enterprise UX</em> - Lou Rosenfeld, Dave Malouf and Uday Gajendar</li>
-                        <a>Reserve your spot on all the webinars</a>
-                      </ul>
-                  </li>
-                  <li class="event silver">
-                      <h3>UX &amp; Development Virtual Meetup #1</h3>
-                      <ul class="webinars-list">
-                        <li><em>UX &amp; Development as Partners: Open Q&amp;A</em> - Marcin Treder, Ryan Carver and Jeff Veen</li>
-                        <li><em>Perfecting the UX &amp; Development Workflow</em> - Marcin Treder, CEO at UXPin</li>
-                        <li><em>Agile Product Development: Open Q&amp;A</em> - Sunita Reddy, VP Product at UXPin</li>
-                        <a>Watch now</a>
-                      </ul>
-                  </li>
               </ul>
             </div>
       </div>
     </section>
-    <section id="form-container">
+    <section id="form-container"> <!--Application Form container-->
       <h2>Join Product Tribes<span class="join-instruction">Product Tribes is a community for designers, developers and PMs. If you’re a recruiter - sorry.
-        Expect your application to be reviewed in <span class="hours">72 hours.</span></span></h2>
+        Expect your application to be reviewed in <span class="hours">48 hours.</span></span></h2>
         <form class="apply-form" id="apply" method="post">
           <label for="name" class="normal-label">Name</label>
             <input type="text" name="name" value="" id="name">
-          <label for="job-title" class="normal-label">Job Title</label>
-            <input type="text" name="job-title" value="" id="job-title">
+          <label for="job" class="normal-label">Job Title</label>
+            <input type="text" name="job" value="" id="job">
           <label for="company" class="normal-label">Company</label>
             <input type="text" name="company" value="" id="company">
           <label for="email" class="normal-label">Email</label>
@@ -77,7 +58,7 @@
     <footer>
       <img src="img/uxpin-logo.png" class="uxpin-logo">
       <h3>The Product Design Platform of the Future. <em>The only one you need.</em></h3>
-      <a class="secondary-button">Join the revolution!</a>
+      <a href="http://uxpin.com" class="secondary-button" title="The Product Design Platform of the Future." target="_blank">Join the revolution!</a>
       <img src="img/uxpin-footer.png" class="uxpin-footer">
     </footer>
   </main>
