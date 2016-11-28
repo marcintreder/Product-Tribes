@@ -216,7 +216,7 @@ $(document).ready(function() {
 
             // success message
             $('.wait').remove();
-            $('#submit-button').empty().removeClass('primary-button').addClass('success').html('Application received. Expect reply in 48 hours.');
+            $('#submit-button').empty().removeClass('primary-button').addClass('success').html('Application received. Thanks!');
 
             // form reset - called automatically after success message
             setTimeout(function() {
